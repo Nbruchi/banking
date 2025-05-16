@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/banking
+    username: postgres
+    password: root
+  
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: brucenkundabagenzi@gmail.com
+    password: ltip zclb wugr hmht
+    properties:
+      mail.smtp:
+        auth: true
+        starttls:
+          enable: true
+    
+logging:
+  level:
+    org.springframework: WARN
+    com.bruce.banking: INFO
+
+jwt:
+  secret: xJ8ODXh4TpePzk1TZ5FjMJwvSovZISo387EmhwoVY5lFAE9MtayQsHjLrvtZ92Eru4UBpsdKHsOfRtyLcajYNlfKvB2futoY
+  expiration: 3600000
+  refresh:
+    expiration: 604800000
+
+server:
+  port: 8080
